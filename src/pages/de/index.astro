@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Link from '../../components/Link.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="Jannik Sohn">
+	<Header
+		href="/"
+		img="../logo.svg"
+	/>
+	<main>
+		<div class="hero">
+			<h1>Jannik Sohn</h1>
+			<p>ein Webdev gerade in Ausbildung <br> und auf meiner Seite kannst du schöne Naturbilder auf Instagram ansehen,<br> oder meine letzten Projekte auschecken!</p>
+		</div>
+		<div class="interaction">
+			<Link
+				href="/projects"
+				text="Projects"
+			/>
+			<Link
+				href="https://www.instagram.com/schmardy_photos"
+				text="Instagram"
+			/>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		min-height: 80vh;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.hero {
+		padding: 2rem;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #ACA9BB;
+		font-size: 1.2rem;
+	}
+	.hero > * {
+		margin: 0;
+	}
+	.interaction {
+		display: flex;
+		width: 50%;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+</style>

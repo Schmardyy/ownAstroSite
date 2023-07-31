@@ -1,0 +1,39 @@
+---
+interface Props {
+    img: string;
+    href: string;
+}
+
+const { href, img } = Astro.props;
+---
+
+<header>
+    <a href={href}>
+        <img src={img} alt="Webseite Logo" id="logo">
+    </a>
+</header>
+
+<style>
+    header {
+        display: flex;
+        height: 120px;
+        background-color: #ACA9BB;
+        box-shadow: 0.1px 0.1px 80px rgba(172, 169, 187, 0.4);
+        align-items: center;
+    }
+
+    a {
+        margin-left: 15px;
+    }
+
+    #logo {
+        display: flex;
+        position: relative;
+        width: 112px;
+        height: 112px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
