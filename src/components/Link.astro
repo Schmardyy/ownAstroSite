@@ -2,17 +2,21 @@
 interface Props {
     title: string;
     text: string;
+    isReversed: boolean;
+    isAbsolute: boolean;
+    target: string;
 }
 
-const { href, text } = Astro.props;
+const { href, text, isReversed, target, isAbsolute } = Astro.props;
 ---
 
-<a class="btn" href={href}>
+<a class:list={['btn', {reversed: isReversed }, {absolute: isAbsolute}]} href={href} target={target}>
     <p>{text}</p>
 </a>
 
 <style>
     .btn {
+        display: block;
         min-width: 10%;
         padding: 1rem 4rem;
         color: #ACA9BB;
@@ -24,7 +28,20 @@ const { href, text } = Astro.props;
         font-size: 1.1rem;
     }
 
-    .btn:hover {
+    .reversed {
+        background-color: #ACA9BB;
+        border: 5px solid #ACA9BB;
+        color: #474554;
+    }
+    .reversed:hover {
+        background-color: #d6d2e5;
+    }
+
+    .absolute {
+        align-self: end;
+    }
+
+    .btn:not(.reversed):hover {
         background: #605c6d;
         color: #312f3d;
     }

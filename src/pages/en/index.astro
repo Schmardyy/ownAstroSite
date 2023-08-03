@@ -2,21 +2,22 @@
 import Layout from '../../layouts/Layout.astro';
 import Link from '../../components/Link.astro';
 import Header from '../../components/Header.astro';
+import Footer from "../../components/Footer.astro";
 ---
 
 <Layout title="Jannik Sohn">
 	<Header
-		href="/"
+		href="/en"
 		img="../logo.svg"
 	/>
 	<main>
 		<div class="hero">
 			<h1>Jannik Sohn</h1>
-			<p>ein Webdev gerade in Ausbildung <br> und auf meiner Seite kannst du schöne Naturbilder auf Instagram ansehen,<br> oder meine letzten Projekte auschecken!</p>
+			<p>I am...<br>a Webdeveloper in training based in Germany and on my Site you can<br>visit my Instagram for some nice nature pictures,<br>or check out my previously made Projects!</p>
 		</div>
 		<div class="interaction">
 			<Link
-				href="/projects"
+				href="/en/projects"
 				text="Projects"
 			/>
 			<Link
@@ -25,6 +26,10 @@ import Header from '../../components/Header.astro';
 			/>
 		</div>
 	</main>
+	<Footer
+		href="/en/imprint"
+		text="Imprint"
+	/>
 </Layout>
 
 <style>

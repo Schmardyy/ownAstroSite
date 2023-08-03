@@ -1,4 +1,5 @@
 ---
+import LangSwitcher from "./LangSwitcher.astro";
 interface Props {
     img: string;
     href: string;
@@ -11,6 +12,7 @@ const { href, img } = Astro.props;
     <a href={href}>
         <img src={img} alt="Webseite Logo" id="logo">
     </a>
+    <LangSwitcher/>
 </header>
 
 <style>

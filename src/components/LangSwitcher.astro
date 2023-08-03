@@ -1,0 +1,77 @@
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider">EN<span>DE</span></span>
+</label>
+
+<style>
+  .switch {
+    font-size: 17px;
+    position: absolute;
+    display: inline-block;
+    width: 5rem;
+    height: 3rem;
+    top: 60px;
+    right: 1rem;
+    translate: 0 -50%;
+  }
+
+  .switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #474554;
+    transition: .2s;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: #ACA9BB;
+    font-family: Poppins, sans-serif;
+    padding-left: 0.5rem;
+  }
+
+  .slider span {
+    padding-left: 1rem;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    border-radius: 3px;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    background-color: #605c6d;
+    transition: .4s;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(1.9em);
+  }
+</style>
+
+<script>
+    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+    function switchLang(e) {
+        if (e.target.checked) {
+          window.location.pathname = '/en'
+        } else {
+          window.location.pathname = '/'
+        }
+    }
+
+    toggleSwitch.checked = window.location.pathname === '/en';
+
+    toggleSwitch.addEventListener('change', switchLang, false);
+</script>

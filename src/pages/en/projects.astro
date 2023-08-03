@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Link from '../../components/Link.astro';
+import Header from '../../components/Header.astro';
+import Card from '../../components/Card.astro';
+---
+
+<Layout title="Jannik Sohn Projects">
+    <Header
+            href="/en"
+            img="../logo.svg"
+    />
+    <ul class="cards">
+        <Card
+            img="../images/bootstrap.png"
+            alt="Thumbnail of the my own Bootstrap Site"
+            title="Own Bootstrap"
+            body="On this Website I tried to rebuild some common components to see how much Bootstrap helps you."
+            href="https://janniksohn.de/ownBootstrap/"
+            linkText="See More"
+        />
+        <Card
+            img="../images/tictactoe.png"
+            alt="Thumbnail of the my own TicTacToe Site"
+            title="TicTacToe"
+            body="I tried to rebuild Tic Tac Toe with a bot in a fresh design. (not finished yet...)"
+            href="https://janniksohn.de/tikTakToe/"
+            linkText="See More"
+        />
+        <Card
+            img="../images/javascript.png"
+            alt="Thumbnail of the my own pure Javascript Site"
+            title="Full Javascript"
+            body="In this project I created a Website with no HTML elements. Eveything is loaded and generated through plan Javascript."
+            href="https://janniksohn.de/jsBasicsProject/"
+            linkText="See More"
+        />
+    </ul>
+</Layout>
+
+<style>
+    .cards {
+        margin: 0;
+        height: calc(100% - 120px);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+    }
+</style>
